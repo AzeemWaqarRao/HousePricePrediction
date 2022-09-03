@@ -11,3 +11,10 @@
 ```
 conda create -p venv python==3.7 -y
 ```
+
+
+
+### Test the application
+```
+https://house-price-prediction-1.herokuapp.com/predict
+```
