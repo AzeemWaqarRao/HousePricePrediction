@@ -8,7 +8,34 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style>
+    input {
+    /* Set the border to be 2 pixels wide and solid */
+    border: 2px solid black;
+    
+    /* Set the padding to be 10 pixels */
+    padding: 10px;
+    margin: 2px;
+    
+    /* Set the font size to be 16 pixels */
+    font-size: 14px;
+    
+    /* Set the background color to be light gray */
+    background-color: #f2f2f2;
+    
+    /* Set the text color to be black */
+    color: black;
+    
+    /* Set the border radius to be 5 pixels */
+    border-radius: 5px;
+    
+    /* Set the box-shadow to add a subtle drop shadow */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 
+    width : 400px;
+
+}
+</style>
   
 </head>
 
@@ -18,18 +45,18 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <input type="number" name="CRIM" placeholder="CRIM" required="required" /><br>
-    	<input type="number" name="ZN" placeholder="ZN" required="required" /><br>
-        <input type="number" name="INDUS" placeholder="INDUS" required="required" /><br>
-        <input type="number" name="CHAS" placeholder="CHAS" required="required" /><br>
-        <input type="number" name="NOX" placeholder="NOX" required="required" /><br>
-        <input type="number" name="RM" placeholder="RM" required="required" /><br>
-        <input type="number" name="Age" placeholder="Age" required="required" /><br>
-        <input type="number" name="DIS" placeholder="DIS" required="required" /><br>
-        <input type="number" name="RAD" placeholder="RAD" required="required" /><br>
-        <input type="number" name="PTRATIO" placeholder="PTRATIO" required="required" /><br>
+      <input type="number" name="CRIM" placeholder="per capita crime rate by town" required="required" /><br>
+    	<input type="number" name="ZN" placeholder="proportion of residential land zoned for lots over 25,000 sq.ft." required="required" /><br>
+        <input type="number" name="INDUS" placeholder="proportion of non-retail business acres per town." required="required" /><br>
+        <input type="number" name="CHAS" placeholder="Charles River dummy variable (1 if tract bounds river; 0 otherwise)" required="required" /><br>
+        <input type="number" name="NOX" placeholder="nitric oxides concentration (parts per 10 million)" required="required" /><br>
+        <input type="number" name="RM" placeholder="average number of rooms per dwelling" required="required" /><br>
+        <input type="number" name="Age" placeholder="proportion of owner-occupied units built prior to 1940" required="required" /><br>
+        <input type="number" name="DIS" placeholder="weighted distances to five Boston employment centres" required="required" /><br>
+        <input type="number" name="RAD" placeholder="index of accessibility to radial highways" required="required" /><br>
+        <input type="number" name="PTRATIO" placeholder="pupil-teacher ratio by town" required="required" /><br>
         <input type="number" name="B" placeholder="B" required="required" /><br>
-        <input type="number" name="LSTAT" placeholder="LSTAT" required="required" /><br>
+        <input type="number" name="LSTAT" placeholder="% lower status of the population" required="required" /><br>
 
        
 
@@ -41,7 +68,9 @@
   
    
  </div>
- {{prediction_text}}
+
+ <h5>{{prediction_text}}</h5>
+
 
 </body>
 </html>
