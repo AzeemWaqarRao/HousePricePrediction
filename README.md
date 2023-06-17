@@ -34,4 +34,8 @@ The project includes the following files:
 * model_training.ipynb: a Jupyter notebook where the linear regression model is trained on the Boston Housing dataset.
 * model.py: a Python script to save the trained model to a file.
 * app.py: a Flask web application that uses the trained model to make predictions.
+<<<<<<< HEAD
 * templates/home.html: an HTML template for the web application.
+=======
+* templates/home.html: an HTML template for the web application.
+>>>>>>> 188644fe6aba9e9f85740f6e49af8f99d80edeb5
